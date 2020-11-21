@@ -29,7 +29,7 @@ public class HomeController {
 @RequestMapping("/")
 public class HomeController {
 
-    private static final String HOME = "/home";
+    private static final String HOME = "/home.html";
 
     @GetMapping("/")
     @ResponseStatus(HttpStatus.OK)
