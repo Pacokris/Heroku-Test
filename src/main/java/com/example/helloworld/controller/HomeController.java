@@ -33,8 +33,13 @@ public class HomeController {
 
     @GetMapping("/")
     @ResponseStatus(HttpStatus.OK)
-    public String getCurrentTime() {
+    public ModelAndView displayHome(Map<String, Object> model) {
 
-        return Instant.now().toString();
+        String helloWorld = "HELLO WORLD !";
+        String time = Instant.now().toString();
+        model.put( "helloWorld", helloWorld );
+        model.put( "time", time );
+
+        return new ModelAndView( HOME, model );
     }
 }
