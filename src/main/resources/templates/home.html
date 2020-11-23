@@ -2,12 +2,23 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>HEROKU - TEST</title>
 </head>
 <body>
-<div><p>HEROKU - TEST</p>
-    <span th:text="${helloWorld}"></span>
+<div>
     <span th:text="${time}"></span>
+</div>
+
+<div>
+    <label for="users">List Users</label>
+    <select class="form-control" id="users">
+        <option th:each="usersList : ${users}"><span th:text="${usersList.id}"></span></option>
+    </select>
+
+    <label for="usersContent">List Users</label>
+    <select class="form-control" id="usersContent">
+        <option th:each="usersList : ${usersContent.users}"><span th:text="${usersList.username}"></span></option>
+    </select>
 </div>
 </body>
 </html>

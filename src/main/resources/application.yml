@@ -1,2 +1,6 @@
 server:
   port: 8088
+url:
+  back:
+    scheme: https
+    host: pacokris-test-bdd.herokuapp.com
